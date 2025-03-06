@@ -21,6 +21,7 @@ Steps:
   -- ButtonList
   --- Button
   --VideoContainer
+  --- VideoCard
 
 b. Video Page
 Head
@@ -58,4 +59,4 @@ WatchVideo
 - How to use actions of slice? useDispatch hook
 - How to subscribe to store to access data? useSelector
 
-6.
+6. Youtube API not working: Solution enabled YouTube Data API v3
