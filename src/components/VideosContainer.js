@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { YOUTUBE_VIDEOS_API } from '../utils/constants';
 import VideoCard from './VideoCard';
+import { Link } from 'react-router-dom';
 
 const VideosContainer = () => {
  
@@ -30,7 +31,12 @@ const VideosContainer = () => {
   return (
     <div className="flex flex-wrap">
     {videos.length > 0  ? ( // Ensure videos exist before mapping
-      videos.map((video) => <VideoCard key={video.id} videoInfo={video} />)
+      videos.map((video) => 
+        <Link to={"/watch?v=" + video.id}>
+          <VideoCard key={video.id} videoInfo={video} />
+        </Link>
+      
+      )
     ) : (
       <p>Loading videos...</p> // Show loading text while fetching
     )}

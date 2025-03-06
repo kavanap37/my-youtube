@@ -60,3 +60,11 @@ WatchVideo
 - How to subscribe to store to access data? useSelector
 
 6. Youtube API not working: Solution enabled YouTube Data API v3
+
+7. Routing:
+
+- npm i react-router-dom
+- In App.js createBrowserRouter and add routes
+- RouterProvider in App.js to provide the created router
+- Use `<Outlet/>` for changing components based on URL
+- `<Link>` to link the routes
