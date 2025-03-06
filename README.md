@@ -19,6 +19,7 @@ Steps:
 - SideBar
 - Maincontainer
   -- ButtonList
+  --- Button
   --VideoContainer
 
 b. Video Page
@@ -56,3 +57,5 @@ WatchVideo
   b useSelector
 - How to use actions of slice? useDispatch hook
 - How to subscribe to store to access data? useSelector
+
+6.
