@@ -68,3 +68,12 @@ WatchVideo
 - RouterProvider in App.js to provide the created router
 - Use `<Outlet/>` for changing components based on URL
 - `<Link>` to link the routes
+
+8. Getting video on WatchPage: use useSearchParams to fetch information from URL not useParams
+
+- native browser search params: URLSearchParams which has property
+- Change all iframe classes to camelcase as iframe is used inside react
+
+9. Higher Order Component: Takes existing component and modifies it to match requirement
+
+10. Search Bar
