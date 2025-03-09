@@ -86,16 +86,24 @@ WatchVideo
   -- How to check if API works: Just in browser console use fetch()
 - clearing timer of setTimeOut
 - use Cache, through useState
-- How the whole cycle works:
-  -- 1. when a key is pressed(eg: a):
-  ---- render the component
-  ---- useEffect()
-  ---- start timer => make api call after 200ms
-  -- 2. now one more key pressed(eg:ab):
-  ---- destroy the component and calls timer close method(useEffect timer closing return method). As we every re-render will create new component
-  ---- re-render component
-  ---- useEffect()
-  ---- start timer => make api call after 200ms
+- How the whole cycle works:  
+  -- 1. when a key is pressed(eg: a):  
+  ---- render the component  
+  ---- useEffect()  
+  ---- start timer => make api call after 200ms  
+  -- 2. now one more key pressed(eg:ab):  
+  ---- destroy the component and calls timer close method(useEffect timer closing return method). As we every re-render will create new component  
+  ---- re-render component  
+  ---- useEffect()  
+  ---- start timer => make api call after 200ms  
   -- 3. if no key was pressed after a then simply setTimeout(200ms) will work => make api call after 200ms
 
   11. n-level comments struture: Even youtube just has 2 level. Eg of n-level: reddit.Recursion of components
+  12. Infinite scrolling(More complex than pagination)
+  13. Live comments:  
+      --a. Web socket: once Socket connection(bi-directional) made, data can be passed immediately.There is no interval, anytime data can be sent and received. Send and receive right away.eg: Trading app, whatsapp.  
+      --b.Long polling(API polling): Uni-directional. UI checks server after given interval and updates UI. eg: Gmail,cricbuzz.
+  14. API polling is used for live Chat. WHY: Order doesn't matter, hence even youtube doesn't show timestamp, and it shouldn't have to be too accurate with time. HOW TO DO API POLLING: setInterval
+  15. Always clear setInterval and setTimeOut
+  16. using random name generator and message functions from helper.js to use generated content for live chat
+  17. flex-col reverse for ive chat to come from the end
