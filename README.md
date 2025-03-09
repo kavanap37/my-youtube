@@ -76,4 +76,24 @@ WatchVideo
 
 9. Higher Order Component: Takes existing component and modifies it to match requirement
 
-10. Search Bar
+10. Search Bar: Use debouncing
+
+- Debouncing:
+  --Perfomance:
+  --- iphone pro max = 14 letter _ 1000 = 140000
+  --- with debouncing= 3 API calls _ 1000 = 3000
+- Use Youtube search suggestion API: `https://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=YOURSEARCHTERM`(Gave xml o/p and not specific to youtube) or `http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=Query`(gave json o/p)
+  -- How to check if API works: Just in browser console use fetch()
+- clearing timer of setTimeOut
+- use Cache, through useState
+- How the whole cycle works:
+  -- 1. when a key is pressed(eg: a):
+  ---- render the component
+  ---- useEffect()
+  ---- start timer => make api call after 200ms
+  -- 2. now one more key pressed(eg:ab):
+  ---- destroy the component and calls timer close method(useEffect timer closing return method). As we every re-render will create new component
+  ---- re-render component
+  ---- useEffect()
+  ---- start timer => make api call after 200ms
+  -- 3. if no key was pressed after a then simply setTimeout(200ms) will work => make api call after 200ms
