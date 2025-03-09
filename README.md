@@ -97,3 +97,5 @@ WatchVideo
   ---- useEffect()
   ---- start timer => make api call after 200ms
   -- 3. if no key was pressed after a then simply setTimeout(200ms) will work => make api call after 200ms
+
+  11. n-level comments struture: Even youtube just has 2 level. Eg of n-level: reddit.Recursion of components
