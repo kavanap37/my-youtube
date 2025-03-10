@@ -192,6 +192,8 @@ var nameList = [
     return result;
   }
   
+
+  //used for HOOKS tutorial not part of youtube app
   export const findPrime = (num) => {
     let i,
       primes = [2, 3],
